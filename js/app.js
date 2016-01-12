@@ -3,7 +3,7 @@
   'use strict';
 
   var uploadUrl = 'https://upload.wistia.com/',
-      api_password = null//paste here api password ;
+      api_password = null;//<-----paste here wistia api password
 
 
   var wistiaUploader = angular.module('wistiaUploader',[
