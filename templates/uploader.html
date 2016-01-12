@@ -38,17 +38,6 @@
               </td>
               <td>
                   <p class="size">{{file.size | formatFileSize}}</p>
-                  <p>
-                    <div class="animate-switch-container" ng-switch on="file.$response().result">
-                      <div class="animate-switch" ng-switch-when="undefined">Uploading File...</div>
-
-                      <div class="animate-switch" ng-switch-default>
-                        <div ng-bind-html="buildUrl(file.$response().result.hashed_id)">
-                        </div>
-                      </div>
-
-                    </div>
-                  </p>
                   <div class="progress progress-striped active fade" data-ng-class="{pending: 'in'}[file.$state()]" data-file-upload-progress="file.$progress()"><div class="progress-bar progress-bar-success" data-ng-style="{width: num + '%'}"></div></div>
               </td>
               <td>
@@ -61,6 +50,17 @@
                       <span>Cancel</span>
                   </button>
 
+              </td>
+              <td>
+                <div class="jumbotron" ng-switch on="file.$response().result">
+                  <div ng-switch-when="undefined">Uploading File...</div>
+
+                  <div ng-switch-default>
+                    <div ng-bind-html="buildUrl(file.$response().result.hashed_id)">
+                    </div>
+                  </div>
+
+                </div>
               </td>
           </tr>
       </table>

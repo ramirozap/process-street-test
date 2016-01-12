@@ -2,24 +2,38 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Wistia Uploader</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap styles -->
-  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-  <!-- Generic page styles -->
-  <link rel="stylesheet" href="css/style.css">
-  <!-- blueimp Gallery styles -->
-  <link rel="stylesheet" href="//blueimp.github.io/Gallery/css/blueimp-gallery.min.css">
-  <!-- CSS to style the file input field as button and adjust the Bootstrap progress bars -->
-  <link rel="stylesheet" href="css/jquery.fileupload.css">
-  <link rel="stylesheet" href="css/jquery.fileupload-ui.css">
-  <!-- CSS adjustments for browsers with JavaScript disabled -->
-  <noscript><link rel="stylesheet" href="css/jquery.fileupload-noscript.css"></noscript>
-  <noscript><link rel="stylesheet" href="css/jquery.fileupload-ui-noscript.css"></noscript>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <!-- Generic page styles -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- blueimp Gallery styles -->
+    <link rel="stylesheet" href="//blueimp.github.io/Gallery/css/blueimp-gallery.min.css">
+    <!-- CSS to style the file input field as button and adjust the Bootstrap progress bars -->
+    <link rel="stylesheet" href="css/jquery.fileupload.css">
+    <link rel="stylesheet" href="css/jquery.fileupload-ui.css">
+    <!-- CSS adjustments for browsers with JavaScript disabled -->
+    <noscript><link rel="stylesheet" href="css/jquery.fileupload-noscript.css"></noscript>
+    <noscript><link rel="stylesheet" href="css/jquery.fileupload-ui-noscript.css"></noscript>
+    <style>
+    /* Hide Angular JS elements before initializing */
+    .ng-cloak {
+        display: none;
+    }
+    </style>
   </head>
   <body ng-app="wistiaUploader">
 
 
-    <video-uploader></video-uploader>
+    <div class="container">
+
+        <h1>Wistia video uploader</h1>
+        <h2>Process Street Test</h2>
+
+
+      <video-uploader></video-uploader>
+    </div>
 
 
     <script src="//code.jquery.com/jquery-git2.min.js"></script>
