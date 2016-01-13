@@ -38,11 +38,13 @@
               }
             })
             .then(function successCallback(response) {
-
               if (response.data.status === "ready") {
                 $scope.message = "";
                 $interval.cancel($scope.interval);
                 $scope.embedCode = $sce.trustAsHtml(response.data.embedCode);
+              }else if (response.data.status === "failed") {
+                $interval.cancel($scope.interval);
+                $scope.message = "There was an error while processing the file. Stopped.";
               }
             }, function errorCallback(response) {
               $interval.cancel($scope.interval);
