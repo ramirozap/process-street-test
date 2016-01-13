@@ -46,6 +46,7 @@
               }
             }, function errorCallback(response) {
               $interval.cancel($scope.interval);
+              $scope.message = "There was an error while processing the file. Stopped.";
             })},3000);
           };
       }
